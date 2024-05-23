@@ -12,34 +12,65 @@ def main():
     st.text("")
 
     st.subheader("Individual Airbnb Data")
+    
     Jim = pd.read_csv("jim_airbnb_data.csv")
+    st.write("Modern Private · Albany Centre · WiFi · 2 Garage")
+    st.write("Entire townhouse in Auckland, New Zealand")
+    st.write("5 guests, 3 bedrooms, 4 beds, 2 baths")
     st.write(Jim)
     
     Alex = pd.read_csv("alex_airbnb_data.csv")
+    st.write("Modern Private Home, Full kitchen with 2bathroom")
+    st.write("Entire home in Auckland, New Zealand")
+    st.write("6 guests, 2 bedrooms, 3 beds, 2 baths")
     st.write(Alex)
     
     Glenda = pd.read_csv("glenda_airbnb_data.csv")
+    st.write("Sleek Urban Oasis In Albany")
+    st.write("Entire rental unit in Auckland, New Zealand")
+    st.write("5 guests, 3 bedrooms, 4 beds, 2 baths")
     st.write(Glenda)
     
     Joshua = pd.read_csv("joshua_airbnb_data.csv")
+    st.write("Luxury 2 BDR apartment w/ designer interior")
+    st.write("Entire rental unit in Auckland, New Zealand")
+    st.write("4 guests, 2 bedrooms, 2 beds, 1 bath")
     st.write(Joshua)
     
     Prince = pd.read_csv("prince_airbnb_data.csv")
+    st.write("7 mins drive to Albany Centre, Private & elegant")
+    st.write("Entire home in Auckland, New Zealand")
+    st.write("4 guests, 2 bedrooms, 2 beds, 1 bath")
     st.write(Prince)
     
     Tiffany = pd.read_csv("tiffany_airbnb_data.csv")
+    st.write("Pinehill 2 Bedroom Unit")
+    st.write("Entire home in Auckland, New Zealand")
+    st.write("4 guests, 2 bedrooms, 4 beds, 1 bath")
     st.write(Tiffany)
     
     Michael = pd.read_csv("michael_airbnb_data.csv")
+    st.write("Luxury brand new house with free parking")
+    st.write("Entire home in Auckland, New Zealand")
+    st.write("6 guests, 2 bedrooms, 2 beds, 2.5 baths")
     st.write(Michael)
     
     Noorani = pd.read_csv("noorani_airbnb_data.csv")
+    st.write("Delightful Double Bedroom Unit")
+    st.write("Entire home in Auckland, New Zealand")
+    st.write("3 guests, 2 bedrooms, 1 bath")
     st.write(Noorani)
     
-    Andy = pd.read_csv("Andy_airbnb_data.csv")
+    Andy = pd.read_csv("andy_airbnb_data.csv")
+    st.write("Top Schoolzone+Top Golf+Top Location - By the Bay！")
+    st.write("Entire home in Auckland, New Zealand")
+    st.write("5 guests, 2 bedrooms, 3 beds, 1 bath")
     st.write(Andy)
     
-    Donghong = pd.read_csv("Donghong_airbnb_data.csv")
+    Donghong = pd.read_csv("donghong_airbnb_data.csv")
+    st.write("Harbour View Guesthouse")
+    st.write("Entire rental unit in Auckland, New Zealand")
+    st.write("3 guests, 2 bedrooms, 5 beds, 1 bath")
     st.write(Donghong)
     
     st.subheader("Merged Airbnb Data")
