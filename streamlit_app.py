@@ -60,8 +60,9 @@ def main():
 
     fig.tight_layout()
     
-    
     st.subheader("Average Price Trend")
+    average_price_trend = AirbnbData.mean(axis=1)
+    st.line_chart(average_price_trend)
     
     st.subheader("Cosine Similarity Matrix")
      
