@@ -48,14 +48,17 @@ def main():
     AirbnbData.fillna(0, inplace=True)  # Fill NaN values with 0
     st.write(AirbnbData)
     
-    
-    st.subheader("Comparison between Jim's Price and Other Listings' Prices")
-    for name in ["Alex", "Glenda", "Joshua", "Prince", "Tiffany", "Michael", "Noorani", "Andy"]:
-    st.write(f"## Scatter Plot: Jim vs {name}")
-    scatter_chart = st.pyplot()  # Create a placeholder for the plot
-    scatter_chart.pyplot(plt.scatter(AirbnbData["Jim"], AirbnbData[name], alpha=0.5))
-    scatter_chart.pyplot(plt.xlabel("Jim"))
-    scatter_chart.pyplot(plt.ylabel(name))
+    st.subheader("Scatter Plots")
+    fig, axes = st.pyplot(return_figure=True)
+    axes = fig.subplots(3, 3, figsize=(15, 15)).flatten()
+    for i, col in enumerate(AirbnbData.columns[1:]):  # Skip the first column which is 'Jim'
+        axes[i].scatter(AirbnbData['Jim'], AirbnbData[col])
+        axes[i].set_title(f'Comparison of Prices between Jim and {col.split()[0]} Listings')
+        axes[i].set_xlabel("Jim's Price")
+        axes[i].set_ylabel(f"{col.split()[0]}'s Price")
+        axes[i].grid(True)
+
+    fig.tight_layout()
     
     
     st.subheader("Average Price Trend")
